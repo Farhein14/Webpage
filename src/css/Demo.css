@@ -1,0 +1,947 @@
+:root {
+  --font: 'Open sans';
+  --teamColor: #000F45;
+}
+
+* {
+  margin: 0;
+}
+
+.Demo__Container {
+  width: -webkit-fill-available;
+}
+
+.Demo__Img {
+  /* background-image: url(../assets/logo.png);
+  background-size: contain; */
+  height: 60px;
+  width: 145px;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-size: 45px;
+  font-family: 'Open Sans';
+  background: linear-gradient(to right, #3e68fc, #ff5670, #feb400, #3ccb4e);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.Demoheader {
+  display: inline-block;
+  width: 100%;
+}
+
+.Demoheader ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+  color: #000;
+}
+
+.Demoheader li a {
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+  color: #000;
+}
+
+.Demoheader li a:hover, .Demoheader .Demo__menubtn:hover {
+  background-color: #f4f4f4;
+}
+
+.Demoheader .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* menu */
+.Demoheader .Demo__menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+  margin-left: 11vw;
+  font-family: var(--font);
+}
+
+/* menu icon */
+.Demoheader .Demo__menuicon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.Demoheader .Demo__menuicon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.Demoheader .Demo__menuicon .navicon:before, .Demoheader .Demo__menuicon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.Demoheader .Demo__menuicon .navicon:before {
+  top: 5px;
+}
+
+.Demoheader .Demo__menuicon .navicon:after {
+  top: -5px;
+}
+
+/* menu btn */
+.Demoheader .Demo__menubtn {
+  display: none;
+}
+
+.Demoheader .Demo__menubtn:checked ~ .Demo__menu {
+  max-height: 415px;
+}
+
+.dropdown {
+  width: 100%;
+}
+
+.dropdown .dropbtn {
+  font-size: 15px;
+  border: none;
+  outline: none;
+  color: #000;
+  padding: 20px 17px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  text-align: left;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #eaeaea;
+  color: 000;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  padding: 10px 25px;
+}
+
+.Demo__Img {
+  float: left;
+}
+
+.Demo__Banner {
+  padding: 5% 10%;
+  background: transparent url('../assets/Banner-Bg.png') 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-wrap: wrap;
+  background-size: cover;
+  margin: 0 2.5% 3% 2.5%;
+}
+
+.Banner__right {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.Demo__RightBanner {
+  width: 55%;
+  display: inline-block;
+  text-align: center;
+}
+
+.Demo__LeftBanner {
+  display: inline-block;
+  width: 45%;
+  font-family: 'open sans';
+}
+
+.Banner__Head {
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #fff;
+  font-weight: 400;
+}
+
+.Banner__Content {
+  font-size: 1.5rem;
+  color: #fff;
+  line-height: 4rem;
+  padding: 15px 0 35px 0;
+}
+
+.Banner__btn {
+  padding: 12px 30px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.LeftBanner {
+  padding: 9% 0 0 0;
+}
+
+.Demo__Wrap {
+  padding: 15px 40px 5px 40px;
+}
+
+/* Team Banner css */
+.Teams__Banner {
+  background: transparent url('../assets/Bannerpath.png') 0% 0% no-repeat padding-box;
+  margin-top: 60px;
+  padding: 80px;
+  padding-bottom: 0;
+  background-size: cover;
+}
+
+.TeamBanner {
+  display: block;
+  width: 47%;
+}
+
+.TeamsBanner__Container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.TeamHead, .TeamTitle {
+  font-size: 3.1rem;
+  padding: 11% 0 5% 35%;
+  line-height: 3.7rem;
+  width: 68%;
+  color: var(--teamColor);
+  font-family: var(--font);
+}
+
+.TeamTitle {
+  font-size: 1.4rem;
+  padding: 0 0 5% 35%;
+  line-height: 2rem;
+  width: 68%;
+}
+
+.TeamBanner__Two.TeamBanner .TeamProduct, .TeamBanner__Four.TeamBanner .TeamProduct {
+  background-color: #fff;
+  border-radius: 0 75px 75px 75px;
+  width: 50%;
+  padding: 35px;
+  padding-bottom: 65px;
+}
+
+.TeamProduct img {
+  width: 100%;
+  height: 100%;
+}
+
+.TeamBanner__Two.TeamBanner {
+  position: relative;
+  bottom: 5vw;
+  margin-left: 6%;
+}
+
+.Team__Head {
+  font-size: 24px;
+  line-height: 56px;
+  color: var(--teamColor);
+  font-family: var(--font);
+  font-weight: 700;
+  padding: 2% 4% 0 4%;
+  text-align: center;
+}
+
+.Team__Title {
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--teamColor);
+  font-family: var(--font);
+  font-weight: 400;
+  padding: 0 38px;
+  text-align: center;
+}
+
+.TeamBanner__Three.TeamBanner .TeamProduct {
+  background-color: #fff;
+  border-radius: 75px 0px 75px 75px;
+  width: 50%;
+  padding: 10%;
+  margin-left: 34%;
+  padding-bottom: 65px;
+}
+
+.TeamProduct img {
+  padding: 20px 0;
+}
+
+.TeamBanner__Three.TeamBanner {
+  position: relative;
+  bottom: 7vw;
+}
+
+.TeamBanner__Four.TeamBanner .TeamProduct {
+  position: relative;
+  top: 75px;
+}
+
+/* TABS CSS */
+/* Tabs Start */
+.ease {
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tabs {
+  background: #fff;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.tabs > input, .tabs > span {
+  width: 10%;
+  height: 10vh;
+  line-height: 2rem;
+  position: absolute;
+  top: 0;
+  padding-top: 10px;
+}
+
+.tabs > input {
+  cursor: pointer;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  position: absolute;
+  z-index: 99;
+}
+
+.tabs > span {
+  background: transparent;
+  text-align: left;
+  overflow: hidden;
+  color: #9B9EAA;
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+.tabs > span i, .tabs > span {
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.tabs > input:hover + span {
+  background: rgba(255,255,255,.1);
+}
+
+.tabs > input:checked + span {
+  background: #fff;
+}
+
+.tabs > input:checked + span, .tabs > input:hover + span {
+  color: var(--teamColor);
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+#tab-1, #tab-1 + span {
+  left: 10%;
+}
+
+#tab-2, #tab-2 + span {
+  left: 22%;
+}
+
+#tab-3, #tab-3 + span {
+  left: 34%;
+}
+
+#tab-4, #tab-4 + span {
+  left: 46%;
+}
+
+#tab-5, #tab-5 + span {
+  left: 58%;
+}
+
+#tab-6, #tab-6 + span {
+  left: 70%;
+}
+
+#tab-7, #tab-7 + span {
+  left: 82%;
+}
+
+.tab-content {
+  padding: 80px 20px 20px;
+  width: 97%;
+  min-height: 340px;
+}
+
+.tab-content section {
+  width: 100%;
+  display: none;
+}
+
+.tab-content section .Tabs-Content {
+  width: 40%;
+  margin-top: 15px;
+  font-size: 100px;
+  font-weight: 100;
+  text-align: left;
+  display: inline-block;
+  padding-left: 8%;
+}
+
+#tab-1:checked ~ .tab-content #tab-item-1 {
+  display: block;
+}
+
+#tab-2:checked ~ .tab-content #tab-item-2 {
+  display: block;
+}
+
+#tab-3:checked ~ .tab-content #tab-item-3 {
+  display: block;
+}
+
+#tab-4:checked ~ .tab-content #tab-item-4 {
+  display: block;
+}
+
+#tab-5:checked ~ .tab-content #tab-item-5 {
+  display: block;
+}
+
+#tab-6:checked ~ .tab-content #tab-item-6 {
+  display: block;
+}
+
+#tab-7:checked ~ .tab-content #tab-item-7 {
+  display: block;
+}
+
+/* effect-3 */
+.effect-3 .line {
+  background: #3498DB;
+  width: 8%;
+  height: 1px;
+  position: absolute;
+  margin-left: 1%;
+}
+
+#tab-1:checked ~ .line {
+  left: 9%;
+}
+
+#tab-2:checked ~ .line {
+  left: 21%;
+}
+
+#tab-3:checked ~ .line {
+  left: 33%;
+}
+
+#tab-4:checked ~ .line {
+  left: 45%;
+}
+
+#tab-5:checked ~ .line {
+  left: 57%;
+}
+
+#tab-6:checked ~ .line {
+  left: 69%;
+}
+
+#tab-7:checked ~ .line {
+  left: 81%;
+}
+
+.RemoteTeams__BannerHead {
+  font-size: 2.5rem;
+  line-height: 4rem;
+  color: var(--teamColor);
+  font-family: var(--font);
+  text-align: center;
+}
+
+.RemoteTeams__BannerTitle {
+  font-size: 1.4rem;
+  line-height: 2.3rem;
+  color: var(--teamColor);
+  font-family: var(--font);
+  text-align: center;
+  padding: 1% 2%;
+  display: block;
+  width: 46%;
+  margin: auto;
+}
+
+.RemoteTeams__Banner {
+  margin-top: 110px;
+}
+
+.RemoteTeams__BannerTabs {
+  padding: 2% 9%;
+}
+
+.tabs > span {
+  border-top: 1px solid #D1D6E4;
+  width: 10%;
+}
+
+.TabcontentHead {
+  color: #040045;
+  font-family: var(--font);
+  font-size: 2.6rem;
+  line-height: 3.7rem;
+  padding-bottom: 4%;
+}
+
+.TabcontentTitle, .TabsubContent {
+  color: #363F61;
+  font-family: var(--font);
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.TabSubtitle {
+  color: #FF4667;
+  font-family: var(--font);
+  font-size: 1.4rem;
+  padding: 7% 0 3% 0;
+}
+
+.Tabcontent__Image {
+  width: 50%;
+  display: inline-block;
+}
+
+.Tabcontent__Image img {
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  margin: 34px auto;
+  display: block;
+}
+
+/* Copyright CSS */
+.Copyright__Container {
+  background-color: #303235;
+  padding: 1.5rem;
+  color: #9C9C9C;
+  font-family: var(--font);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.CopyRightContent {
+  display: inline-block;
+  width: 28%;
+  position: relative;
+  padding-left: 10%;
+}
+
+.Copyright__Terms {
+  display: inline-block;
+  width: 60%;
+}
+
+@media (orientation: landscape) {
+  .Demoheader li {
+      display: inline-block;
+  }
+
+  .Demoheader li a {
+      padding: 10px 26px;
+  }
+
+  .Demoheader .Demo__menu {
+      clear: none;
+      float: left;
+      max-height: none;
+  }
+
+  .Demoheader .Demo__menuicon {
+      display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .dropdown .dropbtn {
+      width: 100%;
+  }
+}
+
+@media (orientation: portrait) {
+  .Demo__Wrap {
+      padding: 10px 20px;
+  }
+
+  .Demoheader .Demo__menu {
+      margin-left: 0;
+      position: absolute;
+      display: block;
+      width: -webkit-fill-available;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 72px;
+      left: 0px;
+      text-align: left;
+      padding: 0 20px;
+  }
+
+  .dropdown .dropbtn, .Demoheader li a {
+      padding: 20px 10px;
+      font-size: 1rem;
+  }
+
+  .dropdown:hover .dropdown-content {
+      position: relative;
+  }
+
+  .Demoheader .Demo__menuicon {
+      padding: 30px 5px;
+  }
+
+  .Demo__Banner {
+      padding: 11%;
+      display: block;
+      margin: 0;
+  }
+
+  .Demo__LeftBanner, .Demo__RightBanner {
+      width: 100%;
+      height: auto;
+  }
+
+  .Banner__Content {
+      font-size: 1.5rem;
+      line-height: 2.3rem;
+      padding: 4% 0;
+  }
+
+  .Banner__Head {
+      font-size: 2.2rem;
+      line-height: 3rem;
+      padding: 0;
+  }
+
+  .Banner__right, .LeftBanner {
+      padding: 0 0 0 0;
+  }
+
+  .RightBanner {
+      padding: 40px 0 0 0;
+  }
+
+  .TeamBanner {
+      width: 100%;
+      margin: 0 !important;
+  }
+
+  .TeamHead, .TeamTitle {
+      padding: 0 5% 3% 0%;
+      font-size: 2rem;
+      line-height: 3rem;
+      width: auto;
+  }
+
+  .TeamTitle {
+      font-size: 1.3rem;
+      line-height: 2rem;
+  }
+
+  .Teams__Banner {
+      padding: 3% 5%;
+  }
+
+  .TeamBanner__Two.TeamBanner, .TeamBanner__Three.TeamBanner {
+      bottom: 0;
+  }
+
+  .TeamBanner__Two.TeamBanner .TeamProduct, .TeamBanner__Three.TeamBanner .TeamProduct, .TeamBanner__Four.TeamBanner .TeamProduct {
+      width: 100%;
+      margin: 0;
+      margin-top: 10%;
+      padding: 50px 0;
+      top: 0;
+  }
+
+  .RemoteTeams__BannerTabs {
+      padding: 0;
+  }
+
+  .tabs > input:checked + span, .tabs > input:hover + span {
+      font-size: 0.6rem;
+      line-height: 1rem;
+      width: 14%;
+  }
+
+  .RemoteTeams__Banner {
+      margin-top: 0px;
+  }
+
+  .RemoteTeams__BannerHead {
+      font-size: 1.5rem;
+      line-height: 2.2rem;
+      font-weight: 700;
+  }
+
+  .RemoteTeams__BannerTitle {
+      width: 85%;
+      font-size: 1rem;
+      line-height: 2rem;
+  }
+
+  #tab-1, #tab-1 + span {
+      left: 5%;
+  }
+
+  .tabs > span {
+      font-size: 0.6rem;
+      line-height: 1rem;
+      word-break: break-word;
+      height: 1rem;
+  }
+
+  #tab-7, #tab-7 + span {
+      left: 87%;
+  }
+
+  #tab-6, #tab-6 + span {
+      left: 74%;
+  }
+
+  #tab-5, #tab-5 + span {
+      left: 60%;
+  }
+
+  #tab-4, #tab-4 + span {
+      left: 47%;
+  }
+
+  .tab-content section .Tabs-Content {
+      padding-left: 0;
+  }
+
+  .TabcontentHead {
+      font-size: 2rem;
+      line-height: 3rem;
+      width: 100%;
+  }
+
+  .tab-content section .Tabs-Content {
+      width: 96%;
+  }
+
+  .tab-content {
+      width: 88%;
+  }
+
+  .Tabcontent__Image img {
+      width: 100%;
+  }
+
+  .Tabcontent__Image {
+      width: 100%;
+  }
+
+  .CopyRightContent, .Copyright__Terms {
+      width: 100%;
+      padding-left: 0;
+      text-align: center;
+  }
+
+  .Banner__btn {
+      padding: 4% 10%;
+      font-size: 1rem;
+  }
+
+  .Team__Head {
+      font-size: 2.5rem;
+      line-height: 3rem;
+  }
+
+  .Team__Title {
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+      padding: 12% 10%;
+  }
+}
+
+/* make keyframes that tell the start state and the end state of our object */
+@-webkit-keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fade-in.one {
+  -webkit-animation-delay: 0.7s;
+  -moz-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+}
+
+button.Banner__btn:hover {
+  box-shadow: inset 10em 0 0 0 #0dcea6;
+}
+
+.TeamBanner__Four.TeamBanner {
+  margin-left: 6%;
+}
+
+@media (min-width: 990px) and (max-width: 1026px) {
+  .Demo__Banner {
+      display: block;
+      width: -webkit-fill-available;
+      padding: 40px;
+  }
+
+  .Demo__LeftBanner, .Demo__RightBanner {
+      width: 100%;
+  }
+
+  .tab-content section .Tabs-Content {
+      width: 100%;
+  }
+
+  .Tabcontent__Image {
+      width: 100%;
+  }
+
+  .Teams__Banner {
+      padding: 20px;
+  }
+
+  .TeamHead, .TeamTitle {
+      padding: 5% 29%;
+  }
+
+  .TeamProduct {
+      margin-left: 20%;
+  }
+
+  .TeamBanner__Three.TeamBanner .TeamProduct {
+      margin-left: 25%;
+  }
+
+  .TeamBanner__Three.TeamBanner {
+      bottom: 7vw;
+  }
+
+  .RemoteTeams__BannerHead {
+      padding: 0 12%;
+  }
+}
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.3vw;
+  height: 0.3vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #CDCDCD;
+  border-radius: 0.1vw;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #CDCDCD;
+  border-radius: 0.1vw;
+}
